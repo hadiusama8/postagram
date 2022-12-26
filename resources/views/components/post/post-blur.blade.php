@@ -92,6 +92,21 @@
             border: 0px;
             padding-left: 0px;
         }
+        img.background {
+            position: absolute;
+            z-index: -1;
+            width: 105%;
+            height: 105%;
+            -webkit-filter: blur(10px); /* Safari 6.0 - 9.0 */
+            filter: blur(5px);
+            }
+        img.circle {
+            display: block;
+            margin: 0 auto;
+            }
+        .mySwiper{
+                height: 416px !important;
+            }
     </style>
 @endsection
 <div class="col">
@@ -99,11 +114,16 @@
         <img src="https://mdbcdn.b-cdn.net/img/new/avatars/9.webp" class="profile-pic" alt="...">
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
-                <img src="{{asset('img.jpg')}}" class="card-img-top swiper-slide" alt="..." style="width: 400px; !important">
-                <img src="https://geocominstal.ro/wp-content/uploads/2018/11/blog-ph.jpg" class="card-img-top swiper-slide" alt="..." style="width: 400px; !important">
+                <section class="swiper-slide" style=" width: 400px; !important;">
+                    <img class="background" src="{{asset('img.jpg')}}" class="card-img-top" alt="...">
+                    <img class="circle" src="{{asset('img.jpg')}}" class="card-img-top" alt="..." style="width: 300px; !important;margin: auto;">
+                </section>
+                <section class="swiper-slide" style="background-image: url('https://geocominstal.ro/wp-content/uploads/2018/11/blog-ph.jpg'); width: 400px; !important">
+                    <img src="https://geocominstal.ro/wp-content/uploads/2018/11/blog-ph.jpg" class="card-img-top " alt="..." style="width: 320px; !important; margin: auto;">
+                </section>
             </div>
-               <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
         </div>
         <div class="profile-name">JOHN DOE</div>
         <div class="profile-username">@johndoesurname</div>

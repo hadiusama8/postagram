@@ -13,6 +13,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('pages.post.index');
-});
+Route::get('/{type?}', function ($type = 'post') {
+        return view('pages.post.index', compact('type'));
+})->name('home');

@@ -7,7 +7,7 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item active">
-            <a class="nav-link" href="#">Home</a>
+            <a class="nav-link" href="{{ route('home') }}">Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
@@ -16,7 +16,10 @@
             <a class="nav-link" href="#">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
+            <a class="nav-link" href="{{ route('home', ['type'=>'post']) }}">Post</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('home', ['type'=>'post-blur']) }}">Post Blur</a>
           </li>
         </ul>
       </div>
